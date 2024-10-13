@@ -1,0 +1,57 @@
+@import url(global.css);
+
+#app {
+  display: grid;
+  grid-template-columns: 51.25% 48.75%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+main {
+  overflow: auto;
+  padding: 4rem;
+
+  & .main-container {
+    max-width: 33rem;
+    margin-left: auto;
+  }
+
+}
+
+aside {
+  background-color: var(--surface-primary);
+  padding: 2rem 4rem;
+}
+
+.aside-container {
+  max-width: 31rem;
+  
+  & .star {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 32px;
+  
+  & h1 {
+    font: var(--h1-size);
+
+    & strong {
+      color: var(--text-highlight);
+    }
+  }
+}
+
+.imagem {
+  position: relative;
+  
+  & img {
+    position: absolute;
+  }
+}
