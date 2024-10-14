@@ -1,8 +1,6 @@
-@import url(global.css);
-
 #app {
   display: grid;
-  grid-template-columns: 51.25% 48.75%;
+  grid-template-columns: 48% 52%;
   height: 100vh;
   overflow: hidden;
 }
@@ -13,18 +11,25 @@ main {
 
   & .main-container {
     max-width: 33rem;
-    margin-left: auto;
+    margin-right: auto;
   }
-
 }
 
 aside {
   background-color: var(--surface-primary);
   padding: 2rem 4rem;
+  overflow: hidden;
+
+  & img {
+    max-width: 31rem;
+    overflow: hidden;
+  }
 }
+
 
 .aside-container {
   max-width: 31rem;
+  margin-left: auto;
   
   & .star {
     display: flex;

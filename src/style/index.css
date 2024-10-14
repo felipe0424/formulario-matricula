@@ -1,2 +1,4 @@
-@import url(/src/style/global.css);
-@import url(/src/style/layout.css);
+@import url(global.css);
+@import url(layout.css);
+@import url(forms.css);
+@import url(utility.css);

@@ -11,10 +11,30 @@
 </head>
 <body>
   <div id="app">
+    <aside>
+      <div class="aside-container">
+        <div class="star">
+          <img src="src/assets/icons/logo-star.svg" alt="Star">
+          <img src="src/assets/icons/text-star.svg" alt="">
+        </div>
+        <div class="info">
+          <h1>Porque cada momento <strong>aprendizado</strong> conta</h1>
+          <p>Inscreva seu filho em nossa escola e veja-o florescer em um ambiente acolhedor, seguro e estimulante.</p>
+        </div>
+        <div class="imagem">
+          <img class="img3" src="src/assets/images/background-simple.png" alt="">
+          <img class="img2" src="src/assets/images/background-complete.png" alt="">
+          <img class="img1" src="src/assets/images/pana.png" alt="Alunos">
+        </div>        
+      </div>
+    </aside>
     <main>
       <div class="main-container">
         <div class="voltar">
-          <img src="src/assets/icons/arrow-left-02.svg" alt="Voltar">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 12H20" stroke="#8F8881" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M8.99996 17C8.99996 17 4.00001 13.3176 4 12C3.99999 10.6824 9 7 9 7" stroke="#8F8881" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>            
           <span>Voltar</span>
         </div>
         <div class="title">
@@ -28,7 +48,7 @@
             method="post"
             enctype="multipart/form-data">
 
-            <fieldset>
+            <fieldset name="nome">
             <!-- Define a legenda do form -->
               <legend>
                 <h2>Informações da criança</h2>
@@ -37,61 +57,77 @@
               <div class="input-info">
                 <label 
                   for="fullname">
-                    Nome Completo: 
+                    Nome Completo 
                 </label>
                 <input 
                   type="text" 
                   id="fullname"
                   placeholder="Digite o nome da criança">
               </div>
-              <div class="input-info">
+              <div id="date" class="input-info">
                 <label 
                   for="dataNasc">
-                    Data de Nascimento: 
+                    Data de Nascimento 
                 </label>
-                <input 
-                  type="date"
-                  name="dataNasc"
-                  id="dataNasc"
-                  lang="pt-br">
+                <div class="calendar">
+                  <div class="svg">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6 1C6 0.44772 5.55228 0 5 0C4.44772 0 4 0.44772 4 1V1.44885C4.38032 1.32821 4.78554 1.24208 5.21533 1.17961C5.46328 1.14357 5.72472 1.11476 6 1.09173V1Z" fill="#8F8881"/>
+                      <path d="M18 1.44885C17.6197 1.32821 17.2145 1.24208 16.7847 1.17961C16.5367 1.14357 16.2753 1.11476 16 1.09173V1C16 0.44772 16.4477 0 17 0C17.5523 0 18 0.44772 18 1V1.44885Z" fill="#8F8881"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0288 1H9.9712C8.02294 0.99997 6.45141 0.99994 5.21533 1.17961C3.92535 1.3671 2.8568 1.76781 2.01802 2.6746C1.18949 3.57031 0.83279 4.69272 0.66416 6.04866C0.49997 7.36894 0.49998 9.0541 0.5 11.1739V11.8261C0.49998 13.9459 0.49997 15.6311 0.66416 16.9513C0.83279 18.3073 1.18949 19.4297 2.01802 20.3254C2.8568 21.2322 3.92535 21.6329 5.21533 21.8204C6.45142 22.0001 8.02293 22 9.9712 22H12.0288C13.9771 22 15.5486 22.0001 16.7847 21.8204C18.0747 21.6329 19.1432 21.2322 19.982 20.3254C20.8105 19.4297 21.1672 18.3073 21.3358 16.9513C21.5 15.6311 21.5 13.9459 21.5 11.8261V11.1739C21.5 9.0541 21.5 7.36895 21.3358 6.04866C21.1672 4.69272 20.8105 3.57031 19.982 2.6746C19.1432 1.76781 18.0747 1.3671 16.7847 1.17961C15.5486 0.99994 13.9771 0.99997 12.0288 1ZM3.49783 8C3.03921 8 2.8099 8 2.66385 8.14417C2.51781 8.28833 2.51487 8.51472 2.509 8.96751C2.50027 9.6407 2.5 10.3942 2.5 11.2432V11.7568C2.5 13.9616 2.50182 15.5221 2.64887 16.7045C2.79327 17.8656 3.06263 18.5094 3.48622 18.9673C3.89956 19.4142 4.4647 19.6903 5.503 19.8412C6.57858 19.9975 8.00425 20 10.05 20H11.95C13.9957 20 15.4214 19.9975 16.497 19.8412C17.5353 19.6903 18.1004 19.4142 18.5138 18.9673C18.9374 18.5094 19.2067 17.8656 19.3511 16.7045C19.4982 15.5221 19.5 13.9616 19.5 11.7568V11.2432C19.5 10.3942 19.4997 9.6407 19.491 8.96751C19.4851 8.51472 19.4822 8.28833 19.3362 8.14417C19.1901 8 18.9608 8 18.5022 8H3.49783Z" fill="#8F8881"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M5.75 12C5.75 11.3096 6.30964 10.75 7 10.75H7.00897C7.69933 10.75 8.25897 11.3096 8.25897 12C8.25897 12.6904 7.69933 13.25 7.00897 13.25H7C6.30964 13.25 5.75 12.6904 5.75 12ZM9.7455 12C9.7455 11.3096 10.3052 10.75 10.9955 10.75H11.0045C11.6948 10.75 12.2545 11.3096 12.2545 12C12.2545 12.6904 11.6948 13.25 11.0045 13.25H10.9955C10.3052 13.25 9.7455 12.6904 9.7455 12ZM13.741 12C13.741 11.3096 14.3007 10.75 14.991 10.75H15C15.6904 10.75 16.25 11.3096 16.25 12C16.25 12.6904 15.6904 13.25 15 13.25H14.991C14.3007 13.25 13.741 12.6904 13.741 12ZM5.75 16C5.75 15.3096 6.30964 14.75 7 14.75H7.00897C7.69933 14.75 8.25897 15.3096 8.25897 16C8.25897 16.6904 7.69933 17.25 7.00897 17.25H7C6.30964 17.25 5.75 16.6904 5.75 16ZM9.7455 16C9.7455 15.3096 10.3052 14.75 10.9955 14.75H11.0045C11.6948 14.75 12.2545 15.3096 12.2545 16C12.2545 16.6904 11.6948 17.25 11.0045 17.25H10.9955C10.3052 17.25 9.7455 16.6904 9.7455 16Z" fill="#8F8881"/>
+                    </svg>
+                  </div>
+                  <input
+                    type="date"
+                    name="dataNasc"
+                    id="dataNasc"
+                    lang="pt-br">
+                </div>
               </div>
               <div class="select-info">
-                <label 
-                  for="genero">
-                    Sexo: 
-                </label>
-                <select 
-                  name="genero"
-                  id="genero">
-                    <option value="feminino">Feminino</option>
-                    <option value="masculino">Masculino</option>
-                    <option value="na">Prefiro não informar</option>
-                </select>
-              </div>
+                <label for="genero">Sexo</label>
+                <div class="input-select">
+                  <div class="select-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M18.593 8.19486C19.0376 8.52237 19.1326 9.14837 18.8051 9.59306C18.5507 9.93847 18.2963 10.2668 18.0731 10.5528C17.6276 11.1236 17.0143 11.8882 16.3479 12.6556C15.6859 13.4181 14.9518 14.2064 14.2666 14.8119C13.9251 15.1136 13.5721 15.3911 13.2279 15.5986C12.9112 15.7895 12.476 16 11.9999 16C11.5238 16 11.0885 15.7895 10.7718 15.5986C10.4276 15.3911 10.0747 15.1136 9.7332 14.8119C9.04791 14.2064 8.31387 13.4181 7.65183 12.6556C6.98548 11.8882 6.37216 11.1236 5.92664 10.5528C5.70347 10.2668 5.44902 9.93847 5.19463 9.59307C4.86712 9.14837 4.96211 8.52237 5.4068 8.19486C5.58556 8.0632 5.79362 7.99983 5.99982 8H11.9999H17.9999C18.2061 7.99983 18.4142 8.0632 18.593 8.19486Z" fill="#8F8881">                       
+                      </path>
+                    </svg>                     
+                    <select name="genero" id="genero">
+                      <option value="feminino">Feminino</option>
+                      <option value="masculino">Masculino</option>
+                      <option value="na">Prefiro não informar</option>
+                    </select>
+                  </div>
+                </div>
+              </div>              
               <div class="text-info">
                 <label 
                   for="medic">
-                  'Informações Médicas:
+                  Informações Médicas
                 </label>
                 <textarea 
                   name="medic"
                   id="medic"
                   cols="30"
-                  rows="10"
+                  rows="5"
                   placeholder="A criança possui alguma condição médica que a escola deve saber? (Se sim, especifique)">
                 </textarea>
               </div>
               <div class="file-info">
                 <label 
                   for="file">
-                    Nome Completo:
+                    Certidão de Nascimento
                 </label>
                 <div class="upload">
                   <input 
                     type="file" 
                     id="file"
                     name="file">
-                      <img src="src/assets/icons/cloud-upload.svg" alt="Upload">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M34.9552 18.0221C34.97 18.022 34.985 18.022 35 18.022C39.9706 18.022 44 22.0588 44 27.0386C44 31.6796 40.5 35.5016 36 36M34.9552 18.0221C34.9848 17.6921 35 17.3579 35 17.0202C35 10.9339 30.0752 6 24 6C18.2465 6 13.5247 10.4253 13.0408 16.0638M34.9552 18.0221C34.7506 20.2952 33.8572 22.3692 32.4856 24.033M13.0408 16.0638C7.96796 16.5475 4 20.8278 4 26.0366C4 30.8834 7.43552 34.9264 12 35.8546M13.0408 16.0638C13.3565 16.0337 13.6765 16.0183 14 16.0183C16.2516 16.0183 18.3295 16.7639 20.001 18.022" stroke="#D6D3D1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M24 26V42M24 26C22.5996 26 19.9831 29.9886 19 31M24 26C25.4004 26 28.017 29.9886 29 31" stroke="#D6D3D1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
                       <p>
                         Clique aqui para selecionar os arquivos
                       </p>
@@ -99,7 +135,7 @@
               </div>
             </fieldset>
 
-            <fieldset>
+            <fieldset name="endereço">
               <legend>
                 <h2>Endereço residencial</h2>
               </legend>
@@ -107,61 +143,117 @@
               <div class="input-end">
                 <label
                   for="cep">
-                    CEP:
+                    CEP
                 </label>
                 <input 
                   type="text"
                   id="cep"
                   placeholder="Digite o CEP">
               </div>
-              <div class="input-end">
-                <label
-                  for="rua">
-                    Rua:
-                </label>
-                <input 
-                  type="text"
-                  id="rua"
-                  disabled>
+              <div class="flex gap-2rem">
+                <div class="input-end flex-1">
+                  <label
+                    for="rua">
+                      Rua
+                  </label>
+                  <input 
+                    type="text"
+                    id="rua"
+                    placeholder="Rua João Pedro II"
+                    disabled>
+                </div>
+                <div class="input-end flex-2">
+                  <label
+                    for="num">
+                    Número
+                  </label>
+                  <input 
+                    type="number"
+                    id="num">
+                </div>
               </div>
-              <div class="input-end">
-                <label
-                  for="num">
-                  Número:
-                </label>
-                <input 
-                  type="number"
-                  id="num">
-              </div>
-              <div class="input-end">
-                <label
-                  for="cidade">
-                  Cidade:
-                </label>
-                <input 
-                  type="text"
-                  id="cidade"
-                  disabled>
-              </div>
-              <div class="input-end">
-                <label
-                  for="uf">
-                  Estado:
-                </label>
-                <input 
-                  type="text"
-                  id="uf"
-                  disabled>
+              <div class="flex">
+                <div class="input-end flex-1">
+                  <label
+                    for="cidade">
+                    Cidade
+                  </label>
+                  <input 
+                    type="text"
+                    id="cidade"
+                    placeholder="São Paulo"
+                    disabled>
+                </div>
+                <div class="input-end flex-2">
+                  <label
+                    for="uf">
+                    Estado
+                  </label>
+                  <input 
+                    type="text"
+                    id="uf"
+                    placeholder="SP"
+                    disabled>
+                </div>
               </div>
             </fieldset>
 
-            <fieldset>
+            <fieldset name="responsavel">
+              <legend>
+                <h2>Informações do responsável</h2>
+              </legend>
+
+              <div class="nome-resp">
+                <label 
+                  for="nome-resp">
+                    Nome do responsável
+                </label>
+                <input
+                  type="text"
+                  id="nome-resp"
+                  placeholder="Nome completo do responsável">
+                <p>Principal responsável legal e contato de emergência</p>
+              </div>
+              <div class="fone-resp">
+                <label 
+                  for="fone">
+                    Telefone
+                </label>
+                <input
+                  type="tel"
+                  id="fone"
+                  placeholder="(99) 99999-9999">
+              </div>
+              <div class="email-resp">
+                <label 
+                  for="email">
+                    E-mail
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  required
+                  placeholder="Preencha o seu e-mail">
+                  <div class="error">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10 18.3333C14.6024 18.3333 18.3334 14.6023 18.3334 9.99996C18.3334 5.39759 14.6024 1.66663 10 1.66663C5.39765 1.66663 1.66669 5.39759 1.66669 9.99996C1.66669 14.6023 5.39765 18.3333 10 18.3333Z" stroke="#DC2626" stroke-width="1.25"/>
+                      <path d="M9.99335 12.5H10.0008" stroke="#DC2626" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M10 9.99996V6.66663" stroke="#DC2626" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      <p>Insira um e-mail válido</p>
+                      
+                  </div>
+              </div>
+            </fieldset>
+
+            <fieldset name="matricula">
               <legend>
                 <h2>Opções de matrícula</h2>
               </legend>
 
-              <label>Selecione o turno de estudo</label>
               <div class="turno-radio">
+                <label>Selecione o turno de estudo</label>
+                
                 <div class="individual-radio">
                   <input 
                     type="radio" 
@@ -260,23 +352,6 @@
       </div>
     </main>
 
-    <aside>
-      <div class="aside-container">
-        <div class="star">
-          <img src="src/assets/icons/logo-star.svg" alt="Star">
-          <img src="src/assets/icons/text-star.svg" alt="">
-        </div>
-        <div class="info">
-          <h1>Porque cada momento <strong>aprendizado</strong> conta</h1>
-          <p>Inscreva seu filho em nossa escola e veja-o florescer em um ambiente acolhedor, seguro e estimulante.</p>
-        </div>
-        <div class="imagem">
-          <img class="img3" src="src/assets/images/background-simple.png" alt="">
-          <img class="img2" src="src/assets/images/background-complete.png" alt="">
-          <img class="img1" src="src/assets/images/pana.png" alt="Alunos">
-        </div>        
-      </div>
-    </aside>
   </div>
 </body>
 </html>
