@@ -1,7 +1,7 @@
 <body>
     <div align="center">
         <a href="https://felipe0424.github.io/formulario-matricula/" target="_blank">
-        <img src="assets/images/Thumbnail.png" alt="Formulário Matrícula" width="auto">
+        <img src="src/assets/images/Thumbnail.png" alt="Formulário Matrícula" width="auto">
         </a>
     </div>
 </body>
