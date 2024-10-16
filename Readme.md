@@ -1,6 +1,6 @@
 <body>
     <div align="center">
-        <a href="formulario-matricula-cyan.vercel.app" target="_blank">
+        <a href="https://formulario-matricula-cyan.vercel.app/" target="_blank">
         <img src="src/assets/images/Thumbnail.png" alt="Formulário Matrícula" width="auto">
         </a>
     </div>
