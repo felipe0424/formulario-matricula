@@ -2,7 +2,8 @@ input, select {
   appearance: none;
   width: 100%;
   border-radius: 0.5rem;
-  border: 1px solid var(--stroke-default);
+  border: 2px solid transparent;
+  outline: 1px solid var(--stroke-default);
   padding: 0.75rem;
   font: var(--text-l);
 
@@ -86,7 +87,8 @@ legend {
 input:focus,
 select:focus,
 textarea:focus, 
-input[type="date"]:focus-within {
+input[type="date"]:focus-within,
+input[type="checked"]:focus-within {
   outline: 0.25rem solid var(--stroke-secondary);
   border: 0.125rem solid var(--stroke-primary);
   outline-offset: .1px;
@@ -156,7 +158,8 @@ input[type="date"]:focus-within {
 textarea {
   width: 100%;
   max-width: 528px;
-  min-height: 150px;
+  min-width: 500px;
+  min-height: 113px;
   border-radius: 0.5rem;
   border: 1px solid var(--stroke-default);
   padding: 0.75rem;
@@ -216,10 +219,221 @@ textarea {
   color: var(--stroke-default);
 }
 
+.fone-resp {
+  appearance: none;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 .error {
   display: flex;
   align-items: center;
   gap: 4px;
   margin-top: 4px;
   color: var(--error);
+}
+
+/* Opções de matrícula */
+.turno {
+  display: grid;
+  gap: .75rem;
+}
+
+.turno-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  position: relative;
+
+  & .individual {
+    appearance: none;
+    width: 100%;
+    border-radius: 0.5rem;
+    border: 2px solid transparent;
+    outline: 1px solid var(--stroke-default);
+    padding: 0.75rem;
+    font: var(--text-l);
+    
+    &:hover {
+      outline: 0.25rem solid var(--stroke-secondary);
+      border: 0.125rem solid var(--stroke-primary);
+      outline-offset: .1px;
+    }
+
+    & svg {
+      top: 0;
+      left: 0;
+    }
+
+    &:has(:checked) {
+      & input {
+        outline: 0.25rem solid var(--stroke-secondary);
+        border: 0.125rem solid var(--stroke-primary);
+        outline-offset: 0.1px;
+      }
+  
+      & svg {
+        background-image: url(/src/assets/icons/check-select.svg);
+  
+        & path {
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
+
+.image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.individual .image {
+  transition: transform 0.5s ease;
+}
+.individual:hover .image {
+  transform:translateY(-10px);
+}
+
+.esporte > label {
+  margin-bottom: .75rem;
+}
+
+.esporte-cols {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
+  gap: 1.5rem;
+  position: relative;
+
+  & .individual-esporte {
+    appearance: none;
+    width: 100%;
+    border-radius: 0.5rem;
+    border: 2px solid transparent;
+    outline: 1px solid var(--stroke-default);
+    padding: 0.75rem;
+    font: var(--text-l);
+    
+    &:hover {
+      outline: 0.25rem solid var(--stroke-secondary);
+      border: 0.125rem solid var(--stroke-primary);
+      outline-offset: .1px;
+    }
+
+    & svg {
+      top: 0;
+      left: 0;
+    }
+
+    &:has(:checked) {
+      & input {
+        outline: 0.25rem solid var(--stroke-secondary);
+        border: 0.125rem solid var(--stroke-primary);
+        outline-offset: 0.1px;
+      }
+  
+      & svg {
+        background-image: url(/src/assets/icons/check-select.svg);
+  
+        & path {
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
+
+.individual-esporte .image {
+  transition: transform 0.5s ease;
+}
+.individual-esporte:hover .image {
+  transform:translateY(-10px);
+}
+
+.esporte > label {
+  margin-bottom: .75rem;
+}
+
+.terms {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.terms input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  appearance: none;
+  background-color: #fff;
+  cursor: pointer;
+  position: relative;
+}
+
+.terms input[type="checkbox"]:checked {
+  background-image: url('/src/assets/icons/check-terms.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid transparent;
+}
+
+.terms label {
+  display: block;
+}
+
+.terms input {
+  width: 4px;
+  height: 4px;
+  vertical-align: middle;
+}
+
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  gap: 1.5rem;
+}
+
+.button-1 {
+  background-color: transparent;
+  border: none;
+  padding: .75rem 1.5rem;
+  border: 1px solid var(--stroke-primary);
+  border-radius: .5rem;
+  color: var(--stroke-primary);
+  cursor: pointer;
+
+  & button {
+    font: var(--h1-size);
+  }
+
+
+  &:hover {
+    outline: 0.25rem solid var(--stroke-secondary);
+    border: 0.125rem solid var(--stroke-primary);
+    outline-offset: .1px;  
+    color: var(--text-highlight);
+  }
+}
+
+.button-2 {
+  background-color: var(--text-highlight);
+  border: none;
+  padding: .75rem 1.5rem;
+  border: 1px solid var(--stroke-primary);
+  border-radius: .5rem;
+  color: #fff;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #F3541C;
+  }
 }

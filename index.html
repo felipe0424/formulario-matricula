@@ -110,7 +110,7 @@
                   name="medic"
                   id="medic"
                   cols="30"
-                  rows="5"
+                  rows="4"
                   placeholder="A criança possui alguma condição médica que a escola deve saber? (Se sim, especifique)">
                 </textarea>
               </div>
@@ -247,89 +247,139 @@
             </fieldset>
 
             <fieldset name="matricula">
+
               <legend>
                 <h2>Opções de matrícula</h2>
               </legend>
 
-              <div class="turno-radio">
-                <label>Selecione o turno de estudo</label>
-                
-                <div class="individual-radio">
-                  <input 
-                    type="radio" 
-                    name="manha" 
-                    id="manha"
-                    value="manha">
-                    <img src="src/assets/icons/sun-cloud-02.svg" alt="">
-                  <label for="manha">Manhã</label>
+              <div class="turno">
+                <p>Selecione o turno de estudo</p>
+                <div class="turno-cols">
+                  <div class="individual">
+                    <input 
+                      type="radio" 
+                      name="turno" 
+                      id="manha"
+                      value="manha"
+                      hidden>
+                    <label
+                      for="manha">
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z" stroke="#D6D3D1" stroke-width="1.5" stroke-linejoin="round"/>
+                      </svg>
+                      <div class="image">
+                        <img src="src/assets/icons/sun-cloud-02.svg" alt="">
+                        <span>Manhã</span>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="individual">
+                    <label
+                      for="tarde">
+                      <input 
+                        type="radio" 
+                        name="turno" 
+                        id="tarde"
+                        value="tarde"
+                        hidden>
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z" stroke="#D6D3D1" stroke-width="1.5" stroke-linejoin="round"/>
+                      </svg>
+                      <div class="image">
+                        <img src="src/assets/icons/sun-02.svg" alt="">
+                        <span>Tarde</span>
+                      </div>
+                    </label>
+                  </div>
                 </div>
-                <div class="individual-radio">
-                  <input 
-                    type="radio" 
-                    name="tarde" 
-                    id="tarde"
-                    value="tarde">
-                    <img src="src/assets/icons/sun-02.svg" alt="">
-                  <label for="tarde">Tarde</label>
-                </div>
-              </div>
-
-              <label>Em qual esporte você gostaria de inscrever seu filho?</label>
-              <div class="esporte-radio">
-                <div class="esporte-ind-radio">
-                  <input
-                    type="radio"
-                    name="futebol"
-                    id="futebol"
-                    value="futebol">
-                  <img src="src/assets/icons/football.svg" alt="#">
-                  <label for="futebol">Futebol</label>
-                </div>
-                <div class="esporte-ind-radio">
-                  <input
-                    type="radio"
-                    name="basquete"
-                    id="basquete"
-                    value="basquete">
-                  <img src="src/assets/icons/basketball-02.svg" alt="#">
-                  <label for="basquete">Basquete</label>
-                </div>
-                <div class="esporte-ind-radio">
-                  <input
-                    type="radio"
-                    name="natacao"
-                    id="natacao"
-                    value="natacao">
-                  <img src="src/assets/icons/swimming.svg" alt="#">
-                  <label for="natacao">Natação</label>
-                </div>
-                <div class="esporte-ind-radio">
-                  <input
-                    type="radio"
-                    name="yoga"
-                    id="yoga"
-                    value="yoga">
-                  <img src="src/assets/icons/yoga-02.svg" alt="#">
-                  <label for="yoga">Yoga</label>
-                </div>
-                <div class="esporte-ind-radio">
-                  <input
-                    type="radio"
-                    name="volei"
-                    id="volei"
-                    value="volei">
-                  <img src="src/assets/icons/volleyball.svg" alt="#">
-                  <label for="volei">Vôlei</label>
-                </div>
-                <div class="esporte-ind-radio">
-                  <input
-                    type="radio"
-                    name="boxe"
-                    id="boxe"
-                    value="boxe">
-                  <img src="src/assets/icons/boxing-glove-01.svg" alt="#">
-                  <label for="box">Boxe</label>
-                </div>
+              </div> 
+              <div class="esporte">
+                <label>
+                  Em qual esporte você gostaria de inscrever seu filho?
+                </label>
+                <div class="esporte-cols">
+                  <div class="individual-esporte">
+                    <input 
+                      type="radio" 
+                      name="esporte" 
+                      id="futebol" 
+                      value="futebol"
+                      hidden>
+                    <label 
+                      for="futebol">
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z" stroke="#D6D3D1" stroke-width="1.5" stroke-linejoin="round"/>
+                      </svg>
+                      <div class="image">
+                        <img src="src/assets/icons/football.svg" alt="#">
+                        Futebol
+                      </div>
+                    </label>
+                  </div>
+                  
+                  <div class="individual-esporte">
+                    <input type="radio" name="esporte" id="basquete" value="basquete" hidden>
+                    <label for="basquete">
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z" stroke="#D6D3D1" stroke-width="1.5" stroke-linejoin="round"/>
+                      </svg>
+                      <div class="image">
+                        <img src="src/assets/icons/basketball-02.svg" alt="#">
+                        Basquete
+                      </div>
+                    </label>
+                  </div>
+                  
+                  <div class="individual-esporte">
+                    <label for="natacao">
+                      <input type="radio" name="esporte" id="natacao" value="natacao" hidden>
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z" stroke="#D6D3D1" stroke-width="1.5" stroke-linejoin="round"/>
+                      </svg>
+                      <div class="image">
+                        <img src="src/assets/icons/swimming.svg" alt="#">
+                        Natação
+                      </div>
+                    </label>
+                  </div>
+                  
+                  <div class="individual-esporte">
+                    <label for="yoga">
+                      <input type="radio" name="esporte" id="yoga" value="yoga" hidden>
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z" stroke="#D6D3D1" stroke-width="1.5" stroke-linejoin="round"/>
+                      </svg>
+                      <div class="image">
+                        <img src="src/assets/icons/yoga-02.svg" alt="#">
+                        Yoga
+                      </div>
+                    </label>
+                  </div>
+                  <div class="individual-esporte">
+                    <label for="boxe">
+                      <input type="radio" name="esporte" id="boxe" value="boxe" hidden>
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z" stroke="#D6D3D1" stroke-width="1.5" stroke-linejoin="round"/>
+                      </svg>
+                      <div class="image">
+                        <img src="src/assets/icons/boxing-glove-01.svg" alt="#">
+                        Boxe
+                      </div>
+                    </label>
+                  </div>
+                  <div class="individual-esporte">
+                    <label for="volei">
+                      <input type="radio" name="esporte" id="volei" value="volei" hidden>
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z" stroke="#D6D3D1" stroke-width="1.5" stroke-linejoin="round"/>
+                      </svg>
+                      <div class="image">
+                        <img src="src/assets/icons/volleyball.svg" alt="#">
+                        Vôlei
+                      </div>
+                    </label>
+                  </div>
+                </div>                
               </div>
 
             </fieldset>
@@ -338,15 +388,18 @@
               <input 
                 type="checkbox" 
                 name="terms" 
-                id="terms">
+                id="terms"
+                required>
               <label 
                 for="terms">
                 Declaro que li e concordo com os <strong>Termos e Condições</strong> e com a <strong>Política de Privacidade</strong> da escola Estrela do Amanhã. 
               </label>
             </div>
 
-            <button>Salvar respostas</button>
-            <button>Fazer matrícula</button>
+            <div class="buttons">
+              <button class="button-1">Salvar respostas</button>
+              <button class="button-2">Fazer matrícula</button>
+            </div>
           </form>
         </div>
       </div>

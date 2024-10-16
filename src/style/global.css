@@ -17,7 +17,7 @@
   --surface-secondary: #8F8881;
   --surface-disabled: #E7E5E4;
   --stroke-default: #D6D3D1;
-  --stroke-primary: #F3541C;
+  --stroke-primary: #F3541C; 
   --stroke-secondary: #FEE7D6;
   --error: #DC2626;
   --orange: #F9A474;
@@ -46,4 +46,8 @@ body {
 
 h1, h2 {
   color: var(--text-primary);
+}
+
+button {
+  font: var(--text-l);
 }

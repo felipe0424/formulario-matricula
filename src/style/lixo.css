@@ -1,0 +1,119 @@
+.turno-radio {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--stroke-secondary);
+}
+
+.individual-radio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: aqua;
+  & input {
+    position: absolute;
+
+    background-color: crimson;
+    opacity: 0.2;
+    
+    }
+
+  & svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    }
+
+  &:hover svg path {
+    stroke: var(--stroke-primary);
+  }
+
+  &:has(:checked) {
+    & input {
+      outline: 0.25rem solid var(--stroke-secondary);
+      border: 0.125rem solid var(--stroke-primary);
+      outline-offset: 0.1px;
+    }
+
+    & svg {
+      background-image: url(/src/assets/icons/check-select.svg);
+
+      & path {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+
+.individual-radio:hover input {
+  transition: border-color 0.3s ease-in;
+  border-color: var(--stroke-primary);
+}
+
+.individual-radio .select-radio {
+  transition: transform 0.5s ease;
+}
+
+.individual-radio:hover .select-radio {
+  transform: scale(1.1);
+}
+
+.esporte-radio {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  padding-block: 32px;
+  position: relative;
+}
+
+.esporte-individual-radio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  padding: 0;
+  top: 0;
+  max-width: 100%;
+}
+
+.esporte-individual-radio input {
+  position: relative; /* Evita absoluto */
+  height: auto; /* Remove tamanho fixo se não necessário */
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.esporte-individual-radio .select-radio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.esporte-individual-radio svg {
+  position: relative; 
+  margin: 0;
+  padding: 0;
+}
+
+.esporte-individual-radio:hover svg path {
+  stroke: var(--stroke-primary);
+}
+
+.esporte-individual-radio:has(:checked) input {
+  outline: 0.25rem solid var(--stroke-secondary);
+  border: 0.125rem solid var(--stroke-primary);
+  outline-offset: 0.1px;
+}
+
+.esporte-individual-radio:has(:checked) svg {
+  background-image: url(/src/assets/icons/check-select.svg);
+}
+
+.esporte-individual-radio:has(:checked) svg path {
+  opacity: 0%;
+}
