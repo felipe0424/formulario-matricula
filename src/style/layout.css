@@ -60,3 +60,64 @@ aside {
     position: absolute;
   }
 }
+
+@media (max-width: 700px) {
+  #app {
+    display: grid;
+    grid-template-columns: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  main {
+    overflow: auto;
+    padding: 2rem;
+  
+    & .main-container {
+      max-width: auto;
+      margin-right: auto;
+    }
+  }
+  
+  aside {
+    background-color: var(--surface-primary);
+    padding: 1rem 2rem;
+    overflow: hidden;
+  
+    & img {
+      max-width: auto;
+      overflow: hidden;
+    }
+  }
+  
+  .aside-container {
+    max-width: auto;
+    margin-left: auto;
+    
+    & .star {
+      display: flex;
+      gap: 4px;
+      margin-bottom: 4px;
+    }
+  }
+  
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 24px;
+    
+    & h1 {
+      font: var(--h1-size);
+  
+      & strong {
+        color: var(--text-highlight);
+      }
+    }
+  }
+  
+  .imagem {
+    display: none;
+  }
+  
+}
